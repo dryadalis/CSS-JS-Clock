@@ -40,8 +40,8 @@ h1 {
     position: absolute;
     top: 50%;
     right: 50%;
-    transform-origin: 100%;
-    transform: rotate(90deg);
+    transform-origin: 100%; /* put pivot point on the right-hand site */ 
+    transform: rotate(90deg); /* start at the 12 position */
     transition: all 0.05s;
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }

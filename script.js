@@ -4,11 +4,11 @@ const minuteHand = document.querySelector('.minute-hand');
 const hourHand = document.querySelector('.hour-hand');
 
 let setDate = (e) => {
-    const now = new Date();
+    const now = new Date(); // grab the date
 
     const seconds = now.getSeconds();
-    const secondsDegrees = ((seconds / 60) * 360) + 90;
-    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+    const secondsDegrees = ((seconds / 60) * 360) + 90; // turn seconds into degrees
+    secondHand.style.transform = `rotate(${secondsDegrees}deg)`; // rotate second hand depending on secondsDegrees
 
     const minutes = now.getMinutes();
     const minutesDegrees = ((minutes / 60) * 360) + ((seconds/60)*6) + 90
@@ -19,6 +19,6 @@ let setDate = (e) => {
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
 }
 
-setInterval(setDate, 1000)
+setInterval(setDate, 1000) // Run setDate every second
 
 setDate();
