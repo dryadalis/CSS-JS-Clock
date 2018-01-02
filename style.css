@@ -1,5 +1,5 @@
 html {
-    background-color: #DDBC95;
+    background-color: #B9D9C3;
     text-align: center;
 }
 body {
@@ -8,19 +8,27 @@ body {
     margin: 0;
     align-items: center;
 }
-.clock{
-    width: 30rem;
-    height: 30rem;
-    border: 20px solid white;
+
+h1 {
+    color: white;
+    font-family: Lobster;
+    position: absolute;
+    font-size: 60px;
+    top: 0;
+    margin-left: 50px;
+}
+
+.clock {
+    width: 20rem;
+    height: 20rem;
+    border: 15px solid white;
     border-radius: 50%;
     margin: 50px auto;
     position: relative;
     padding: 2rem;
     box-shadow: 
-        0 0 0 4px rgba(0, 0, 0, 0.1),
-        inset 0 0 0 3px #EFEFEF,
-        inset 0 0 10px black,
-        0 0 10px rgba (0, 0, 0, 0.2);
+        2px 2px 2px 2px #752A07;
+
 }
 .clock-face {
     position: relative;
@@ -29,13 +37,83 @@ body {
     transform: translateY(-3px) /*account for the height of clock hands */
 }
 .hand {
-    width:50%;
-    height: 6px;
-    background:black;
     position: absolute;
-    top:50%;
+    top: 50%;
+    right: 50%;
     transform-origin: 100%;
     transform: rotate(90deg);
     transition: all 0.05s;
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+.hour-hand {
+    background: #752A07;
+    height: 8px;
+    width: 30%;
+    border-radius: 5px;
+}
+.minute-hand {
+    background: #752A07;
+    height: 5px;
+    width: 40%;
+    border-radius: 5px;
+}
+.second-hand {
+    background: red;
+    height: 2px;
+    width: 45%;
+}
+.number {
+    position: absolute;
+    margin: auto;
+    height: 1em;
+    font-size: 3em;
+    text-align: center;
+    font-family: Lobster;
+    color: white;
+    font-size: 50px;
+}
+#number-12 {
+    top: 9px;
+    left: 0;
+    right: 0;
+}
+
+#number-3 {
+    top: 0;
+    right: 9px;
+    bottom: 0;
+}
+
+#number-6 {
+    bottom: 9px;
+    left: 0;
+    right: 0;
+}
+
+#number-9 {
+    top: 0;
+    left: 9px;
+    bottom: 0;
+}
+.center-cover{
+    color: red;
+    position: absolute;
+    z-index: 10;
+    width: 3rem;
+    height: 3rem;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    margin: auto;
+}
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    margin: 15px;
+    color: white;
+    font-family: Lobster;
 }
